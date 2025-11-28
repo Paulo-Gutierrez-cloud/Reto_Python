@@ -1,13 +1,18 @@
 # Este archivo contiene las pruebas para nuestro script de numeros primos.
 # Usaremos la libreria 'pytest' para ejecutar estas pruebas automaticamente.
 
-# Primero, importamos la funcion que queremos probar desde nuestro archivo 'ejercicio.py'.
-from Ejercicio import es_primo
+# Primero, importamos la funcion que queremos probar desde nuestro archivo 'primes.py'.
+from primes import es_primo
+
+# Las funciones de prueba deben empezar con 'test_'.
+# Pytest buscara todas las funciones que empiecen asi y las ejecutara.
 
 def test_numeros_primos_basicos():
     """
     Prueba que verifica si detecta correctamente numeros primos conocidos.
     """
+    # 'assert' es una instruccion que dice "asegurate de que esto sea verdad".
+    # Si es verdad, no pasa nada. Si es falso, la prueba falla y nos avisa.
     
     assert es_primo(2) == True  # 2 es el primer numero primo
     assert es_primo(3) == True  # 3 es primo
